@@ -61,5 +61,5 @@ struct OvalTextFieldStyle: TextFieldStyle {
 
 #Preview {
     //SignUpForm(viewTitle:)
-    SignUpForm(viewTitle: "Donor")
+    SplashScreen()
 }

@@ -19,7 +19,7 @@ struct LogIn: View {
                 
     
                 Spacer()
-                Text("iDea Igniters")
+                Text("")
                     .font(.system(size: 40.0).bold())
                 Spacer()
 

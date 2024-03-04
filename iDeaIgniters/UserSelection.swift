@@ -71,5 +71,5 @@ struct UserSelection: View {
 }
 
 #Preview {
-    UserSelection()
+    SplashScreen()
 }

@@ -9,19 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-    
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        TabView{
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+                
+                NavigationLink(destination: LogIn(), label: {
+                    Text("Back")
+                })
+            }
+            .padding()
+            .navigationBarBackButtonHidden(true)
+            .tabItem{
+                Text("Home")
+                Image(systemName: "house")
+            }
             
-            NavigationLink(destination: LogIn(), label: {
-                Text("Back")
-            })
-        }
-        .padding()
-        .navigationBarBackButtonHidden(true)
+            //Create the bottom tabs
+            MapView()
+                .tabItem(){
+                    Text("Maps")
+                    Image(systemName: "mappin.and.ellipse")
+                }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

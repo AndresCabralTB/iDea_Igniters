@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67221E652B966D5000E5E2A2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67221E642B966D5000E5E2A2 /* MapView.swift */; };
 		678C79F12B93C9C400910FA8 /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C79F02B93C9C400910FA8 /* SignUpForm.swift */; };
 		67C3C1582B95140200485150 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3C1572B95140200485150 /* LogIn.swift */; };
 		67D877C82B912E4A00A5C304 /* iDeaIgnitersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D877C72B912E4A00A5C304 /* iDeaIgnitersApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67221E642B966D5000E5E2A2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		6760BD1A2B92DE9A00FB1632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		678C79F02B93C9C400910FA8 /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
 		67C3C1572B95140200485150 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
@@ -66,9 +68,10 @@
 				67EBCE502B923CB400CB6B5C /* SplashScreen.swift */,
 				67D877C92B912E4A00A5C304 /* ContentView.swift */,
 				678C79F02B93C9C400910FA8 /* SignUpForm.swift */,
+				67221E642B966D5000E5E2A2 /* MapView.swift */,
+				67C3C1572B95140200485150 /* LogIn.swift */,
 				67D877CB2B912E4F00A5C304 /* Assets.xcassets */,
 				67D877CD2B912E4F00A5C304 /* Preview Content */,
-				67C3C1572B95140200485150 /* LogIn.swift */,
 			);
 			path = iDeaIgniters;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67221E652B966D5000E5E2A2 /* MapView.swift in Sources */,
 				678C79F12B93C9C400910FA8 /* SignUpForm.swift in Sources */,
 				67C3C1582B95140200485150 /* LogIn.swift in Sources */,
 				67EBCE512B923CB400CB6B5C /* SplashScreen.swift in Sources */,
