@@ -13,25 +13,40 @@ struct SplashScreen: View {
     
     
     var body: some View {
-        ZStack{
-            if self.isActive{
-                LogIn()
-            } else{
-                VStack{
-                    Text("iDea Igniters")
-                        .font(.system(size: 40.0).bold())
-                    
-                    Text("Battling Fast Fashion")
+        VStack{
+            ZStack{
+                if self.isActive{
+                    LogIn()
+                } else{
+                    VStack{
+
+                        Spacer()
+
+                        Text("iDea Igniters")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .padding(.bottom, 30)
+                        
+                        Text("Battling Fast Fashion")
+                            .font(.body)
+                            .multilineTextAlignment(.center)
+                        
+                        Spacer()
+
+                    }
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    .background(
+                        LinearGradient(gradient: Gradient(colors: [.recipent, .donor]), startPoint: .top, endPoint: .bottom)
+                    )
                 }
-            }
-        }.onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                withAnimation {
-                    self.isActive = true
+            }.onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    withAnimation {
+                        self.isActive = true
+                    }
                 }
             }
         }
-        
     }
 }
 

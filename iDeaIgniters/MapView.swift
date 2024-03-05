@@ -20,8 +20,9 @@ struct MapView: View {
         VStack(alignment: .leading){
             Spacer()
 
-            Text("Places to donate")
-                .font(.system(size: 30.0).bold())
+            Text("Locations to donate")
+                .font(.title)
+                .fontWeight(.bold)
                 .underline()
                 .padding(.leading, 20)
                 
@@ -52,7 +53,9 @@ struct MapView: View {
 
             }
             Spacer()
-        }
+        }.background(
+            LinearGradient(gradient: Gradient(colors: [.recipent, .donor]), startPoint: .top, endPoint: .bottom)
+        )
         
     }
 }
