@@ -30,7 +30,12 @@ struct SplashScreen: View {
                         Text("Battling Fast Fashion")
                             .font(.body)
                             .multilineTextAlignment(.center)
+                            .padding(.bottom, 30)
+
                         
+                        Image(systemName: "globe.americas")
+                            .resizable()
+                            .frame(width: 100, height: 100)
                         Spacer()
 
                     }
