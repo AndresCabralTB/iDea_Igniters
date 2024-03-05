@@ -23,48 +23,44 @@ struct LogIn: View {
                     .padding(.bottom, 50)
                 
                 VStack{
+                    Text("Welcome Back!")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color.black)
+                        .padding(.bottom, 20)
                     
-                    VStack{
-                        Text("Welcome Back")
-                            .font(.title)
-                            .fontWeight(.bold)
+                    
+                    TextField("Username", text: $username)
+                        .padding(.horizontal, 10)
+                        .frame(width: UIScreen.main.bounds.width * 0.6, height: 40)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 15)) .background(
+                            RoundedRectangle(cornerRadius: 15) // stroke border
+                                .stroke(Color.black, lineWidth: 1)
+                        )
+                    
+                    
+                    TextField("Password", text: $password)
+                        .padding(.horizontal, 10)
+                        .frame(width: UIScreen.main.bounds.width * 0.6, height: 40)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 15.0)) .background(
+                            RoundedRectangle(cornerRadius: 15) // stroke border
+                                .stroke(Color.black, lineWidth: 1)
+                        ).padding(.bottom, 15)
+                    
+                    NavigationLink {
+                        ContentView()
+                    } label: {
+                        Text("Log In")
+                            .font(.system(size: 20.0).bold())
                             .foregroundStyle(Color.black)
                         
-                        
-                        TextField("Username", text: $username)
-                            .padding(.horizontal, 10)
-                            .frame(width: UIScreen.main.bounds.width * 0.75, height: 40)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 20)) .background(
-                                RoundedRectangle(cornerRadius: 20) // stroke border
-                                    .stroke(Color.black, lineWidth: 1)
-                            )
-                        
-                        
-                        TextField("Password", text: $password)
-                            .padding(.horizontal, 10)
-                            .frame(width: UIScreen.main.bounds.width * 0.75, height: 40)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 20.0)) .background(
-                                RoundedRectangle(cornerRadius: 20) // stroke border
-                                    .stroke(Color.black, lineWidth: 1)
-                            ).padding(.bottom, 15)
-                        
-                        NavigationLink {
-                            ContentView()
-                        } label: {
-                            Text("Log In")
-                                .font(.system(size: 20.0).bold())
-                                .foregroundStyle(Color.black)
-                            
-                                .frame(width: UIScreen.main.bounds.width * 0.6, height: UIScreen.main.bounds.height * 0.05)
-                                .background(Color(.donor))
-                                .clipShape(RoundedRectangle(cornerRadius: 20))
-                                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 1))
-                        }
-                    }
-                    
-                    
+                            .frame(width: UIScreen.main.bounds.width * 0.6, height: UIScreen.main.bounds.height * 0.05)
+                            .background(Color(.donor))
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                            .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.white, lineWidth: 1))
+                    }.padding(.bottom, 10)
                     
                     HStack{
                         
@@ -75,28 +71,27 @@ struct LogIn: View {
                             Text("Sign Up")
                                 .underline()
                         }
-                    }.padding(.all, 20)
+                    }
                     
                 }
-                .padding(.all, 10)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.6)
-                .ignoresSafeArea()
+                .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.4)
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 40.0))
-                .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color.black.opacity(10.0), lineWidth: 1))
+                .ignoresSafeArea(.all)
                 
+                Spacer()
                 
-    
             }.background(Image("selectionBackground")
                 .resizable()
                 .scaledToFill()
+                .blur(radius: 5.0)
+                .ignoresSafeArea(.all)
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                .mask(LinearGradient(gradient: Gradient(stops: [
-                    .init(color: .black, location: 0),
-                    .init(color: .clear, location: 1),
-                    .init(color: .black, location: 1),
-                    .init(color: .clear, location: 1)
-                ]), startPoint: .bottom, endPoint: .top))
+                 .mask(LinearGradient(gradient: Gradient(stops: [
+                     .init(color: .black, location: 0),
+                     .init(color: .clear, location: 1)
+                 ]), startPoint: .bottom, endPoint: .top))
+                 
             )
         }.navigationBarBackButtonHidden(true)
     }

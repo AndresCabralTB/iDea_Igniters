@@ -12,7 +12,6 @@ struct UserSelection: View {
     @State private var selectedUser: String = ""
     var body: some View {
         
-        VStack{
             VStack{
                 
                 Text("Choose Your Role")
@@ -23,31 +22,39 @@ struct UserSelection: View {
                 NavigationLink(destination: SignUpForm(viewTitle: "Donor")) {
                     
                     userSelection(text: "Donor", image: Image(systemName: "app.gift.fill")
-                                  , myColor: Color.donor)
+                                  , myColor: Color.donor, description: "Become a donor and donate all products you wish to the people in need")
                 }
                 
                 NavigationLink(destination: SignUpForm(viewTitle: "Recipient")) {
                     
                     userSelection(text: "Recipient", image: Image(systemName: "hand.raised.app.fill")
-                                  , myColor: Color.recipent)
+                                  , myColor: Color.recipent, description: "Become a recipient if times are tough, and receive donations")
                     
                 }
+                Spacer()
             }
-            Spacer()
-        }
-        
+            .background(Image("selectionBackground")
+                .resizable()
+                .scaledToFill()
+                .blur(radius: 5.0)
+                .ignoresSafeArea(.all)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                
+                 
+            )
+            
     }
     
 }
 
-func userSelection(text: String, image: Image, myColor: Color) -> some View {
+func userSelection(text: String, image: Image, myColor: Color, description: String) -> some View {
     VStack(alignment: .leading){
         HStack{
             Spacer()
             
             image
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width * 0.20, height: UIScreen.main.bounds.height * 0.10)
+                .frame(width: 100, height: 100)
                 .padding(.all, 15)
             
             Spacer()
@@ -61,7 +68,7 @@ func userSelection(text: String, image: Image, myColor: Color) -> some View {
 
 
                 
-                Text("A donor has the capability of donating products to the people in need. ")
+                Text(description)
                     .foregroundStyle(Color.black)
                     .multilineTextAlignment(.leading)
                     .italic()
