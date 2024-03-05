@@ -18,17 +18,18 @@ struct UserSelection: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .padding(.vertical, 20)
-                
+
                 NavigationLink(destination: SignUpForm(viewTitle: "Donor")) {
                     
                     userSelection(text: "Donor", image: Image(systemName: "app.gift.fill")
-                                  , myColor: Color.donor, description: "Become a donor and donate all products you wish to the people in need")
+                                  , myColor: Color.donor, description: "Take the step to become a donor and share the abundance in your life with those who need it most.")
                 }
                 
+
                 NavigationLink(destination: SignUpForm(viewTitle: "Recipient")) {
                     
                     userSelection(text: "Recipient", image: Image(systemName: "hand.raised.app.fill")
-                                  , myColor: Color.recipent, description: "Become a recipient if times are tough, and receive donations")
+                                  , myColor: Color.recipent, description: "Become a recipient if times are tough, and receive donations from people who wish to help")
                     
                 }
                 Spacer()
@@ -39,7 +40,10 @@ struct UserSelection: View {
                 .blur(radius: 5.0)
                 .ignoresSafeArea(.all)
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                
+                 .mask(LinearGradient(gradient: Gradient(stops: [
+                     .init(color: .black, location: 0),
+                     .init(color: .clear, location: 1)
+                 ]), startPoint: .bottom, endPoint: .top))
                  
             )
             
@@ -81,10 +85,9 @@ func userSelection(text: String, image: Image, myColor: Color, description: Stri
         
     }
     .multilineTextAlignment(.leading)
-    .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.20)
+    .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.25)
         .background(myColor)
         .clipShape(RoundedRectangle(cornerRadius: 25.0))
-        .overlay(RoundedRectangle(cornerRadius: 25.0).stroke(Color.white, lineWidth: 4))
     
 }
 
