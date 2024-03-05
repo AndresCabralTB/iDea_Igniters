@@ -30,6 +30,7 @@ struct LogIn: View {
                             .fontWeight(.bold)
                             .foregroundStyle(Color.black)
                         
+                        
                         TextField("Username", text: $username)
                             .padding(.horizontal, 10)
                             .frame(width: UIScreen.main.bounds.width * 0.75, height: 40)
@@ -78,11 +79,14 @@ struct LogIn: View {
                     
                 }
                 .padding(.all, 10)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.6)
+                .ignoresSafeArea()
                 .background(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 20.0))
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black.opacity(10.0), lineWidth: 1))
+                .clipShape(RoundedRectangle(cornerRadius: 40.0))
+                .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color.black.opacity(10.0), lineWidth: 1))
                 
-                Spacer()
+                
+    
             }.background(Image("selectionBackground")
                 .resizable()
                 .scaledToFill()

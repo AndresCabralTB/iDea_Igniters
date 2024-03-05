@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
+
+let realApp = RealmSwift.App(id: "application-0-juchh")
 
 @main
-struct iDeaIgnitersApp: App {
+struct iDeaIgnitersApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             SplashScreen()
