@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		67221E652B966D5000E5E2A2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67221E642B966D5000E5E2A2 /* MapView.swift */; };
+		6741447C2B97EAD200800CC6 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6741447A2B97EAD200800CC6 /* Toolbar.swift */; };
+		6741447D2B97EAD200800CC6 /* genStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6741447B2B97EAD200800CC6 /* genStruct.swift */; };
+		6741447F2B98337D00800CC6 /* AR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6741447E2B98337D00800CC6 /* AR.swift */; };
 		678C79F12B93C9C400910FA8 /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C79F02B93C9C400910FA8 /* SignUpForm.swift */; };
 		678F58662B979EAE0013AF1C /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F58642B979EAE0013AF1C /* ProductCardView.swift */; };
 		678F58672B979EAE0013AF1C /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F58652B979EAE0013AF1C /* ProductList.swift */; };
@@ -24,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		67221E642B966D5000E5E2A2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		6741447A2B97EAD200800CC6 /* Toolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
+		6741447B2B97EAD200800CC6 /* genStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = genStruct.swift; sourceTree = "<group>"; };
+		6741447E2B98337D00800CC6 /* AR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR.swift; sourceTree = "<group>"; };
 		6760BD1A2B92DE9A00FB1632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		678C79F02B93C9C400910FA8 /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
 		678F58642B979EAE0013AF1C /* ProductCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductCardView.swift; path = iDeaIgniters/ProductCardView.swift; sourceTree = SOURCE_ROOT; };
@@ -72,12 +78,17 @@
 			children = (
 				6760BD1A2B92DE9A00FB1632 /* Info.plist */,
 				67D877C72B912E4A00A5C304 /* iDeaIgnitersApp.swift */,
+				6741447E2B98337D00800CC6 /* AR.swift */,
 				67EBCE522B923F8800CB6B5C /* UserSelection.swift */,
 				67EBCE502B923CB400CB6B5C /* SplashScreen.swift */,
 				67D877C92B912E4A00A5C304 /* ContentView.swift */,
 				678C79F02B93C9C400910FA8 /* SignUpForm.swift */,
 				67221E642B966D5000E5E2A2 /* MapView.swift */,
 				67C3C1572B95140200485150 /* LogIn.swift */,
+				6741447B2B97EAD200800CC6 /* genStruct.swift */,
+				6741447A2B97EAD200800CC6 /* Toolbar.swift */,
+				678F58642B979EAE0013AF1C /* ProductCardView.swift */,
+				678F58652B979EAE0013AF1C /* ProductList.swift */,
 				67D877CB2B912E4F00A5C304 /* Assets.xcassets */,
 				67D877CD2B912E4F00A5C304 /* Preview Content */,
 			);
@@ -88,8 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				67D877CE2B912E4F00A5C304 /* Preview Assets.xcassets */,
-				678F58642B979EAE0013AF1C /* ProductCardView.swift */,
-				678F58652B979EAE0013AF1C /* ProductList.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -172,12 +181,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				67221E652B966D5000E5E2A2 /* MapView.swift in Sources */,
+				6741447D2B97EAD200800CC6 /* genStruct.swift in Sources */,
+				6741447F2B98337D00800CC6 /* AR.swift in Sources */,
 				678C79F12B93C9C400910FA8 /* SignUpForm.swift in Sources */,
 				67C3C1582B95140200485150 /* LogIn.swift in Sources */,
 				678F58672B979EAE0013AF1C /* ProductList.swift in Sources */,
 				67EBCE512B923CB400CB6B5C /* SplashScreen.swift in Sources */,
 				67D877CA2B912E4A00A5C304 /* ContentView.swift in Sources */,
 				67D877C82B912E4A00A5C304 /* iDeaIgnitersApp.swift in Sources */,
+				6741447C2B97EAD200800CC6 /* Toolbar.swift in Sources */,
 				678F58662B979EAE0013AF1C /* ProductCardView.swift in Sources */,
 				67EBCE532B923F8800CB6B5C /* UserSelection.swift in Sources */,
 			);

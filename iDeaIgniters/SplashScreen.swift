@@ -22,7 +22,7 @@ struct SplashScreen: View {
 
                         Spacer()
 
-                        Text("iDea Igniters")
+                        Text("Blue Earth")
                             .font(.title)
                             .fontWeight(.bold)
                             .padding(.bottom, 30)
@@ -41,11 +41,11 @@ struct SplashScreen: View {
                     }
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                     .background(
-                        LinearGradient(gradient: Gradient(colors: [.recipent, .donor]), startPoint: .top, endPoint: .bottom)
+                        LinearGradient(gradient: Gradient(colors: [.blueEarth, .donor]), startPoint: .top, endPoint: .bottom)
                     )
                 }
             }.onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     withAnimation {
                         self.isActive = true
                     }

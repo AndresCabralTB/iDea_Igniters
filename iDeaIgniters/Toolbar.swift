@@ -16,107 +16,59 @@ let organizations = [
 
 struct Toolbar: View {
     var body: some View {
-        NavigationStack{
-            VStack{
-                Text("Items Bazar").font(.custom("Arial Bold", size: 40)).padding(.top, 30)
-                Divider().overlay(Color.blue).frame(width: UIScreen.main.bounds.width-70)
-                
-                HStack{
-                    NavigationLink(destination: Toolbar()){
-                        VStack{
-                            Image(systemName: "tshirt.fill").resizable().frame(width: 80, height: 70)
-                                .foregroundStyle(LinearGradient(
-                                    gradient: Gradient(colors: [Color.red, .red]),
-                                    startPoint: .top,
-                                    endPoint: .bottom))
-                            Text("Shirts")
-                                .foregroundStyle(Color.black)
-                                .font(.custom("Arial Bold", size: 18))
-
-                        }
-                        .frame(width: 150, height: 150)
-                        .background(Color.recipent)
-                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        .shadow(color: Color.gray, radius: 5)
-                    }
-                    
-                    NavigationLink(destination: Toolbar()){
-                        VStack{
-                            Image(systemName: "globe")
-                            Text("Pants")
-                                .foregroundStyle(Color.black)
-                                .font(.custom("Arial Bold", size: 35))
-
-                        }
-                        .frame(width: 150, height: 150)
-                        .background(Color.recipent)
-                        
-                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        .shadow(color: Color.gray, radius: 5)
-                    }
-                    .padding(.leading, 15)
-                }
-                .padding(.top, 50)
-                HStack{
-                    NavigationLink(destination: Toolbar()){
-                        VStack{
-                            Image(systemName: "globe")
-                            Text("Pants")
-                                .foregroundStyle(Color.black)
-                                .font(.custom("Arial Bold", size: 35))
-
-                        }
-                        .frame(width: 150, height: 150)
-                        .background(Color.recipent)
-                        
-                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        .shadow(color: Color.gray, radius: 5)
-                    }
-                    NavigationLink(destination: Toolbar()){
-                        VStack{
-                            Image(systemName: "tshirt.fill")
-                            Text("Pants")
-                                .foregroundStyle(Color.black)
-                                .font(.custom("Arial Bold", size: 35))
-
-                        }
-                        .frame(width: 150, height: 150)
-                        .background(Color.recipent)
-                        
-                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        .shadow(color: Color.gray, radius: 5)
-                    }
-                    .padding(.leading, 15)
-                }
-                .padding(.top, 30)
-                Divider().overlay(Color.blue).frame(width: UIScreen.main.bounds.width-70).padding(.top, 20)
-                Text("Donate to organizations").font(.custom("Arial Bold", size: 20)).padding(.top, 20)
-                ScrollView(.horizontal){
-                    HStack{
-                        ForEach(organizations, id: \.id){org in
-                            Link(destination: org.Website){
-                                VStack{
-                                    org.Image.resizable().frame(width: 40, height: 40)
-                                    Text(org.Name).font(.custom("Arial", size: 16)).foregroundStyle(Color.black)
-                                }
-                                .frame(width: 120, height: 120)
-                                .background(Color.recipentOP)
-                                .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                                
-                            }
-                        }
-                    }
-                }
-                .scrollIndicators(.hidden)
-                .padding(.top, 30)
-                
-            }
-            
-        }.navigationBarBackButtonHidden(true)
+       
         
+        TabView{
+            Text("Hello")
+        }  .tabItem{
+            Text("Home")
+            Image(systemName: "house")
+        }
+    
+    MapView()
+        .tabItem(){
+            Text("Locations")
+            Image(systemName: "mappin.and.ellipse")
+        }
+    //Chats()
+        .tabItem(){
+            Text("AR")
+            Image(systemName: "camera.fill")
+        }
+    
+    //Profile()
+        .tabItem(){
+            Text("Profile")
+            Image(systemName: "person")
+        }
     }
 }
 
+
+
+func itemStack12(image: Image,text: String, scale: Double, color: Color ) -> some View{
+    VStack{
+        image
+            .resizable().scaleEffect(scale)
+            .foregroundStyle(LinearGradient(
+                gradient: Gradient(colors: [Color.red, .red]),
+                startPoint: .top,
+                endPoint: .bottom))
+        Text(text)
+            .foregroundStyle(Color.black)
+            .font(.title3)
+
+    }
+    .frame(width: 150, height: 150)
+    .background(Color.white)
+    .clipShape(RoundedRectangle(cornerRadius: 15)) .background(
+        RoundedRectangle(cornerRadius: 15) // stroke border
+            .stroke(Color.black, lineWidth: 1)
+    )
+    
+    
+}
+
 #Preview {
-    Toolbar()
+    ContentView()
 }

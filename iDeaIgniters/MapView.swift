@@ -25,12 +25,14 @@ struct MapView: View {
                 .fontWeight(.bold)
                 .underline()
                 .padding(.leading, 20)
+                .foregroundStyle(Color.blueEarth)
                 
             
             VStack{
                 Map(initialPosition: position){ //Mostrar el mapa. Darle sus dimensiones
                 
-                }.clipShape(RoundedRectangle(cornerRadius: 30.0)).frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.3)
+                }.clipShape(RoundedRectangle(cornerRadius: 15)).frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.3)
+                    .padding(.vertical, 25)
                 
                 List{ //Mostrar los datos de los locales
                     Text("Street: ")
@@ -49,12 +51,13 @@ struct MapView: View {
                     Text(verbatim: "ZipCode: ")
                     Text(verbatim: "Phone Number: ")
                 }                        
-                .scrollContentBackground(.hidden)
+//                .scrollContentBackground(.hidden)
 
             }
             Spacer()
         }.background(
-            LinearGradient(gradient: Gradient(colors: [.recipent, .donor]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [.white, .white]), startPoint: .top, endPoint: .bottom)
+                .navigationBarBackButtonHidden(true)
         )
         
     }

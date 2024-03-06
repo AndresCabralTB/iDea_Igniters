@@ -14,10 +14,22 @@ struct UserSelection: View {
         
             VStack{
                 
-                Text("Choose Your Role")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.vertical, 20)
+                VStack{
+
+                    Text("Choose Your Role!")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 20)
+                    Spacer()
+
+                    Text("Begin your experience by choosing a role")
+                        .font(.title3)
+                    Spacer()
+                }
+                .frame(width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height * 0.15 )
+                .background(.ultraThinMaterial)
+                
+                    
 
                 NavigationLink(destination: SignUpForm(viewTitle: "Donor")) {
                     
@@ -28,8 +40,15 @@ struct UserSelection: View {
 
                 NavigationLink(destination: SignUpForm(viewTitle: "Recipient")) {
                     
-                    userSelection(text: "Recipient", image: Image(systemName: "hand.raised.app.fill")
+                    userSelection(text: "Recipient", image: Image(systemName: "heart.fill")
                                   , myColor: Color.recipent, description: "Become a recipient if times are tough, and receive donations from people who wish to help")
+                    
+                }
+                
+                NavigationLink(destination: SignUpForm(viewTitle: "Choose Later")) {
+                    
+                    userSelection(text: "Choose Later", image: Image(systemName: "clock.fill")
+                                  , myColor: Color.newGreen, description: "Become a recipient if times are tough, and receive donations from people who wish to help")
                     
                 }
                 Spacer()
@@ -38,12 +57,7 @@ struct UserSelection: View {
                 .resizable()
                 .scaledToFill()
                 .blur(radius: 5.0)
-                .ignoresSafeArea(.all)
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                 .mask(LinearGradient(gradient: Gradient(stops: [
-                     .init(color: .black, location: 0),
-                     .init(color: .clear, location: 1)
-                 ]), startPoint: .bottom, endPoint: .top))
                  
             )
             
@@ -58,8 +72,8 @@ func userSelection(text: String, image: Image, myColor: Color, description: Stri
             
             image
                 .resizable()
-                .frame(width: 100, height: 100)
-                .padding(.all, 15)
+                .frame(width: 80, height: 80)
+                .padding(.all, 5)
             
             Spacer()
             
@@ -85,7 +99,7 @@ func userSelection(text: String, image: Image, myColor: Color, description: Stri
         
     }
     .multilineTextAlignment(.leading)
-    .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.25)
+    .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.22)
         .background(myColor)
         .clipShape(RoundedRectangle(cornerRadius: 25.0))
     

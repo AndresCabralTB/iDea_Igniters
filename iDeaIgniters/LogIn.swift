@@ -17,10 +17,9 @@ struct LogIn: View {
         NavigationView{
             VStack{
                 Spacer()
-                Text("iDea Igniters")
+                Text("Blue Earth")
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding(.bottom, 50)
                 
                 VStack{
                     Text("Welcome Back!")
@@ -33,8 +32,8 @@ struct LogIn: View {
                     TextField("Username", text: $username)
                         .padding(.horizontal, 10)
                         .frame(width: UIScreen.main.bounds.width * 0.6, height: 40)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 15)) .background(
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .background(
                             RoundedRectangle(cornerRadius: 15) // stroke border
                                 .stroke(Color.black, lineWidth: 1)
                         )
@@ -43,7 +42,6 @@ struct LogIn: View {
                     TextField("Password", text: $password)
                         .padding(.horizontal, 10)
                         .frame(width: UIScreen.main.bounds.width * 0.6, height: 40)
-                        .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 15.0)) .background(
                             RoundedRectangle(cornerRadius: 15) // stroke border
                                 .stroke(Color.black, lineWidth: 1)
@@ -57,7 +55,7 @@ struct LogIn: View {
                             .foregroundStyle(Color.black)
                         
                             .frame(width: UIScreen.main.bounds.width * 0.6, height: UIScreen.main.bounds.height * 0.05)
-                            .background(Color(.donor))
+                            .background(Color.recipent)
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                             .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.white, lineWidth: 1))
                     }.padding(.bottom, 10)
@@ -87,10 +85,6 @@ struct LogIn: View {
                 .blur(radius: 5.0)
                 .ignoresSafeArea(.all)
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                 .mask(LinearGradient(gradient: Gradient(stops: [
-                     .init(color: .black, location: 0),
-                     .init(color: .clear, location: 1)
-                 ]), startPoint: .bottom, endPoint: .top))
                  
             )
         }.navigationBarBackButtonHidden(true)
