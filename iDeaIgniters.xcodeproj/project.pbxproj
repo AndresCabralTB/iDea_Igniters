@@ -23,6 +23,8 @@
 		67D877CF2B912E4F00A5C304 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67D877CE2B912E4F00A5C304 /* Preview Assets.xcassets */; };
 		67EBCE512B923CB400CB6B5C /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBCE502B923CB400CB6B5C /* SplashScreen.swift */; };
 		67EBCE532B923F8800CB6B5C /* UserSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBCE522B923F8800CB6B5C /* UserSelection.swift */; };
+		67F55D3F2B990BEF0067E977 /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F55D3E2B990BEF0067E977 /* Sale.swift */; };
+		67F55D412B990CE80067E977 /* Ropa.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 67F55D402B990CE80067E977 /* Ropa.xcdatamodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		67D877CE2B912E4F00A5C304 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67EBCE502B923CB400CB6B5C /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		67EBCE522B923F8800CB6B5C /* UserSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelection.swift; sourceTree = "<group>"; };
+		67F55D3E2B990BEF0067E977 /* Sale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sale.swift; sourceTree = "<group>"; };
+		67F55D402B990CE80067E977 /* Ropa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Ropa.xcdatamodel; path = ../../../../Ropa.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				6741447A2B97EAD200800CC6 /* Toolbar.swift */,
 				678F58642B979EAE0013AF1C /* ProductCardView.swift */,
 				678F58652B979EAE0013AF1C /* ProductList.swift */,
+				67F55D3E2B990BEF0067E977 /* Sale.swift */,
 				67D877CB2B912E4F00A5C304 /* Assets.xcassets */,
 				67D877CD2B912E4F00A5C304 /* Preview Content */,
 			);
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				67D877CE2B912E4F00A5C304 /* Preview Assets.xcassets */,
+				67F55D402B990CE80067E977 /* Ropa.xcdatamodel */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -182,6 +188,7 @@
 			files = (
 				67221E652B966D5000E5E2A2 /* MapView.swift in Sources */,
 				6741447D2B97EAD200800CC6 /* genStruct.swift in Sources */,
+				67F55D3F2B990BEF0067E977 /* Sale.swift in Sources */,
 				6741447F2B98337D00800CC6 /* AR.swift in Sources */,
 				678C79F12B93C9C400910FA8 /* SignUpForm.swift in Sources */,
 				67C3C1582B95140200485150 /* LogIn.swift in Sources */,
@@ -191,6 +198,7 @@
 				67D877C82B912E4A00A5C304 /* iDeaIgnitersApp.swift in Sources */,
 				6741447C2B97EAD200800CC6 /* Toolbar.swift in Sources */,
 				678F58662B979EAE0013AF1C /* ProductCardView.swift in Sources */,
+				67F55D412B990CE80067E977 /* Ropa.xcdatamodel in Sources */,
 				67EBCE532B923F8800CB6B5C /* UserSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +337,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iDeaIgniters/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to track your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -359,6 +368,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iDeaIgniters/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to track your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -12,36 +12,40 @@ struct ProductCardView: View {
     @State var title: String
     @State var description: String
     @State var size: String
-    @State var price: Int
     
     var body: some View {
-        HStack(alignment: .center,spacing: 0,  content: {
+        HStack(alignment: .center,spacing: 0){
             Image(photo)
                 .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(maxWidth: 100, maxHeight: 100)
-                    .cornerRadius(10.0)
-                    .clipped()
+                .scaledToFill()
+                .frame(width: 90, height:90)
+                .cornerRadius(5.0)
+                .clipped()
+                .padding(.all, 2)
             
                 
             VStack(alignment: .leading) {
-                Text("\(title)").bold()
+                
                 Text("Description: \(description)")
+                    .font(.title3)
+
                 Text("Size: \(size) ")
-                Text("Price: $\(price)")
+                    .font(.title3)
+
+
             }.padding(.horizontal)
-                .frame(width: UIScreen.main.bounds.width * 0.65)
             
-        }).background(RoundedRectangle(cornerRadius: 16)
-            .fill(Color.white)
-//            .shadow(radius: 20,x: 10,y: 10)
+            
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 0)) .background(
+            RoundedRectangle(cornerRadius: 5.0) // stroke border
+                .stroke(Color.black, lineWidth: 1)
         )
-        .padding(EdgeInsets(top: 5, leading: 20, bottom: 5, trailing: 20))
         
     }
 }
 
 #Preview {
-    ProductCardView(photo: "PoloN",title: "T-shirt", description: "Black t-shirt", size: "M", price: 6)
+   SplashScreen()
 
 }

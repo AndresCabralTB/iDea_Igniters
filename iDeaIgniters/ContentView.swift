@@ -62,19 +62,44 @@ struct ContentView: View {
                     ScrollView(.horizontal, showsIndicators: false){
                         
                         HStack{
-                            NavigationLink(destination: ProductList(title: "Shirts")){
+                            NavigationLink(destination: ProductList(title: "Shirts").toolbar{
+                                NavigationLink( destination: Sale()){
+                                    Text("Add")
+                                }
+                            }
+                            
+                            ){
                                 itemStack(image: Image("PoloNew"), text: "Shirts", scale: 0.6, color: Color.shirts)
                             }
                             
                             
-                            NavigationLink(destination: ProductList(title: "Shoes")){
+                            NavigationLink(destination: ProductList(title: "Shoes").toolbar{
+                                NavigationLink( destination: Sale()){
+                                    Text("Add")
+                                }
+                            }
+                            
+                            ){
                                 itemStack(image: Image("ShoeImage"), text: "Shoes", scale: 0.7, color: Color.white)
                             }
                             
-                            NavigationLink(destination: ProductList(title: "Books")){
+                            NavigationLink(destination: ProductList(title: "Shirts").toolbar{
+                                NavigationLink( destination: Sale()){
+                                    Text("Add")
+                                }
+                            }
+                            
+                            ){
                                 itemStack(image: Image("Books"), text: "Books", scale: 0.7, color: Color.white)
                             }
-                            NavigationLink(destination: ProductList(title: "Electronics")){
+                            
+                            NavigationLink(destination: ProductList(title: "Shirts").toolbar{
+                                NavigationLink( destination: Sale()){
+                                    Text("Add")
+                                }
+                            }
+                            
+                            ){
                                 itemStack(image: Image("Electronic"), text: "Electronics", scale: 0.1, color: Color.white)
                                 
                             }
@@ -109,6 +134,7 @@ struct ContentView: View {
             }
             
             
+            
             MapView()
                 .tabItem(){
                     Text("Locations")
@@ -120,7 +146,9 @@ struct ContentView: View {
                     Text("AR")
                     Image(systemName: "camera.fill")
                 }
+                
         }.navigationBarBackButtonHidden(true)
+            
         
         
     }
@@ -142,12 +170,12 @@ func itemStack(image: Image,text: String, scale: Double, color: Color ) -> some 
             )
         
         Text(text)
-            .font(.title3)
+            .font(.title2)
             .fontWeight(.medium)
             .foregroundStyle(Color.black)
         
     }
-    .padding(.trailing, 10)
+    .padding(.all, 10)
     
     
 }
@@ -155,5 +183,5 @@ func itemStack(image: Image,text: String, scale: Double, color: Color ) -> some 
 
 #Preview {
     
-    ContentView()
+   SplashScreen()
 }
